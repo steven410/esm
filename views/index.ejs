@@ -1,0 +1,15 @@
+<form method="POST" action="/wins/add">
+	<input type="submit" value="Submit">
+</form>
+
+<div id="main">
+	<div class="rows">
+		<% players.forEach(function(player){%>
+		<div class="player" style="float: left; width: 80%">
+			<h4><%=player.name%> <button class="wins-btn"> <%=player.wins%> </button> <button class="loses-btn"> <%=player.loses%> </button></h4>
+		<%});%>
+		</div>
+	</div>
+</div>
+
+<script src="main.js"></script>
