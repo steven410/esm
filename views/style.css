@@ -1,0 +1,17 @@
+body {
+	background-color: #be1920;
+}
+
+#main {
+	margin: 0, auto;
+}
+
+#header {
+	background-color: #efefef;
+}
+
+.player {
+	float: left; 
+	width: 80%;
+	padding: 10px;
+}

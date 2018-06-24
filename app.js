@@ -12,7 +12,8 @@ app.use(express.static('public'))
 const playerSchema = new mongoose.Schema({
 	name: String, 
 	wins: Number,
-	loses: Number
+	loses: Number,
+	rank: Number
 });
 
 const Player = mongoose.model("Player", playerSchema);
@@ -56,6 +57,17 @@ app.post("/wins/add", (req, res) => {
 	});
 });
 
+// app.post("/wins/add", (req, res) => {
+// 	Player.findByIdAndUpdate(req.params.PlayerId, 
+// }
+
 app.listen(process.env.PORT || 3000, () => {
   console.log('ESM server has started');
 });
+
+
+
+
+
+
+

@@ -1,15 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ESM</title>
+        <style type="text/css">       	
+        	
+
+			#main {
+			  margin: 0, auto;
+			  
+			}
+
+			#header {
+			  background-color: #efefef;
+			  padding: 5px;
+			}
+
+			.player {
+			  width: 100%;
+			  float: left; 
+			  
+			}
+
+			.player-name {
+			}
+
+			.rows{
+
+			}
+        </style>
+    </head>
+    <body>
+
 <form method="POST" action="/wins/add">
 	<input type="submit" value="Submit">
 </form>
 
 <div id="main">
+	<div id="header">
+		<h3><span>Name</span> <span>Wins</span> <span>Loses</span> </h3>
+	</div>
 	<div class="rows">
 		<% players.forEach(function(player){%>
-		<div class="player" style="float: left; width: 80%">
-			<h4><%=player.name%> <button class="wins-btn"> <%=player.wins%> </button> <button class="loses-btn"> <%=player.loses%> </button></h4>
+		<div class="player">
+			<h4 class="player-name"><%=player.name%> 
+				<button class="wins-btn"> <%=player.wins%> </button>
+				 <button class="loses-btn"> <%=player.loses%> </button>
+				 <%=player.standing %> 
+				 <!-- Show week to week placement: if player.standing < player.standing of previous week: show down arrow, if > show up arrow, else show dash - -->
+			</h4>
 		<%});%>
 		</div>
 	</div>
 </div>
 
 <script src="main.js"></script>
+</body>
+</html>
